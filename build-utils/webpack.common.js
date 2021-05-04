@@ -32,7 +32,7 @@ module.exports = {
         chunkFilename: 'widget.chunk.js',
         // Output library name
         library: 'SampleWidget',
-        libraryTarget: 'window',
+        libraryTarget: 'umd',
         publicPath: publicPath,
         libraryExport: 'default',
     },
@@ -45,10 +45,10 @@ module.exports = {
     // https://webpack.js.org/configuration/plugins/
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: "./public/index.html",
-            scriptLoading: "blocking"
-        }),
+        // new HtmlWebpackPlugin({
+        //     template: "./public/index.html",
+        //     scriptLoading: "blocking"
+        // }),
         new MiniCssExtractPlugin({
             filename: "widget.css",
             chunkFilename: "widget.css"
